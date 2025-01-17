@@ -16,7 +16,23 @@ async function main() {
   const db = client.db(dbName);
   const collection = db.collection('Users');
 
-  // the following code examples can be pasted here...
+
+  // Add a new data
+
+//   const data = {
+//     firstName: "Arpitha"
+//   }
+//   const insertResult = await collection.insertOne(data);
+//   console.log('Inserted documents =>', insertResult);
+
+
+//   //Get all data
+//   const findResult = await collection.find({}).toArray();
+//   console.log('Found documents =>', findResult);
+
+  const afterDelete = await collection.deleteOne({firstName: "Shiva"});
+  console.log(afterDelete);
+
 
   return 'done.';
 }
